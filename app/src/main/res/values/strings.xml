@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">mine</string>
+    <string name="pref_setting_android">안드로이드 설정</string>
+    <string name="pref_setting_fontSize">글자 크기</string>
+    <string name="pref_setting_lock">잠금</string>
+    <string name="pref_setting_id">계정</string>
+    <string name="pref_setting_connect_id">연결된 계정</string>
+    <string name="pref_setting_alarm">알림</string>
+    <string name="pref_setting_alarm_set">알림 설정</string>
+    <string name="pref_setting_notice">공지사항</string>
+    <string name="pref_setting_customer">고객센터</string>
+    <string name="pref_setting_app_info">앱 정보</string>
+
 </resources>
