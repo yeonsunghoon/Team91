@@ -11,8 +11,7 @@ import android.widget.TextView;
 
 public class TimelineActivity extends AppCompatActivity {
 
-
-    public static final int REQUST_CODE = 101;
+    public static final int REQUEST_CODE = 101;
     TextView todoTxt, diaryTxt, expenseTxt;
     Button calendarBtn, searchBtn, plusBtn, settingBtn;
 
@@ -37,36 +36,17 @@ public class TimelineActivity extends AppCompatActivity {
         plusBtn = (Button) findViewById(R.id.plus_btn);
         settingBtn = (Button) findViewById(R.id.setting_btn);
 
-        calendarBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        searchBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        plusBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
         settingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(TimelineActivity.this, SettingsActivity.class);
-                startActivityForResult(intent, REQUST_CODE);
+                startActivityForResult(intent, REQUEST_CODE);
             }
 
         });
 
     }
+
+
 
 }
