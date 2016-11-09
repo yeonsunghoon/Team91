@@ -1,10 +1,11 @@
 package com.nnm.team91.mine;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,18 +24,28 @@ public class TimelineActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        final FragmentManager fragmentManager = getSupportFragmentManager();
         TodoFragment todoFragment = (TodoFragment) fragmentManager.findFragmentById(R.id.todo_fm);
         DiaryFragment diaryFragment = (DiaryFragment) fragmentManager.findFragmentById(R.id.diary_fm);
         ExpenseFragment expenseFragment = (ExpenseFragment) fragmentManager.findFragmentById(R.id.expense_fm);
 
-        todoTxt = (TextView)findViewById(R.id.todo_txt);
-        diaryTxt = (TextView)findViewById(R.id.diary_txt);
-        expenseTxt = (TextView)findViewById(R.id.expense_txt);
+
+        todoTxt = (TextView) findViewById(R.id.todo_txt);
+        diaryTxt = (TextView) findViewById(R.id.diary_txt);
+        expenseTxt = (TextView) findViewById(R.id.expense_txt);
         calendarBtn = (Button) findViewById(R.id.calendar_btn);
         searchBtn = (Button) findViewById(R.id.search_btn);
         plusBtn = (Button) findViewById(R.id.plus_btn);
         settingBtn = (Button) findViewById(R.id.setting_btn);
+
+        calendarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment picker = new DatePickerFragment();
+
+                picker.show(getSupportFragmentManager(), "DatePicker");
+            }
+        });
 
         settingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +56,6 @@ public class TimelineActivity extends AppCompatActivity {
 
         });
 
-    }
-
-
+    } // end of onCreate
 
 }
