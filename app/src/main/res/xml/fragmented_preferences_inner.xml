@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_setting_android">
+        <CheckBoxPreference
+            android:key="wifi"
+            android:title="@string/pref_setting_android" />
+        <EditTextPreference
+            android:title="@string/pref_setting_android"
+            android:dependency="wifi" />
+    </PreferenceCategory>
+    <!-- android:layout="?android:attr/preferenceLayoutChild" -->
+</PreferenceScreen>

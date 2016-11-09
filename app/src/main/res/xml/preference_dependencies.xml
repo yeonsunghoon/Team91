@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_setting_app_info">
+        <CheckBoxPreference
+            android:key="wifi"
+            android:title="@string/pref_setting_alarm_set" />
+        <EditTextPreference
+            android:title="@string/pref_setting_alarm"
+            android:dependency="wifi" />
+    </PreferenceCategory>
+    <!-- android:layout="?android:attr/preferenceLayoutChild" -->
+</PreferenceScreen>
