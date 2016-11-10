@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+
 public class TimelineActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE = 101;
@@ -42,8 +44,23 @@ public class TimelineActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DialogFragment picker = new DatePickerFragment();
-
                 picker.show(getSupportFragmentManager(), "DatePicker");
+            }
+        });
+
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TimelineActivity.this, SearchActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+
+        plusBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TimelineActivity.this, EditActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
             }
         });
 

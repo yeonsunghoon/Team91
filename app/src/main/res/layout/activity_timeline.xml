@@ -17,24 +17,24 @@
             android:id="@+id/todo_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="(Todo)" />
 
         <TextView
             android:id="@+id/diary_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="(Diary)" />
 
         <TextView
             android:id="@+id/expense_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="(Expense)" />
     </LinearLayout>
 
@@ -74,31 +74,35 @@
 
         <Button
             android:id="@+id/calendar_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@android:drawable/ic_menu_my_calendar" />
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/calendar_img"
+            android:gravity="center" />
 
         <Button
             android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@android:drawable/ic_menu_search" />
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_img"
+            android:gravity="center" />
 
         <Button
             android:id="@+id/plus_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@android:drawable/btn_plus" />
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/plus_img"
+            android:gravity="center" />
 
         <Button
             android:id="@+id/setting_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@android:drawable/ic_menu_set_as" />
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/settings_img"
+            android:gravity="center" />
 
     </LinearLayout>
 </LinearLayout>

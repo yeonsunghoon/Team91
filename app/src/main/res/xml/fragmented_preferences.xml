@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/pref_setting_android">
-        <headers android:fragment="com.nnm.team91.mine.PrefsFragmentA"
-            android:title="@string/pref_setting_fontSize" />
+        <CheckBoxPreference
+            android:key="checkbox_preference"
+            android:title="@string/app_name"
+            android:summary="@string/pref_setting_app_info" />
     </PreferenceCategory>
 </PreferenceScreen>

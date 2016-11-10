@@ -10,4 +10,7 @@
     <string name="pref_setting_notice">공지사항</string>
     <string name="pref_setting_customer">고객센터</string>
     <string name="pref_setting_app_info">앱 정보</string>
+
+
+    <string name="search_txt">이전 검색어</string>
 </resources>
