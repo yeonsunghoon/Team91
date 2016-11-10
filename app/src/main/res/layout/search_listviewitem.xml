@@ -8,24 +8,26 @@
         android:id="@+id/list_img"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="@drawable/sharp_img"
         android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/sharp_img" />
 
     <TextView
         android:id="@+id/list_txt"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/list_img"
         android:hint="이전 검색어"
-        android:textSize="30dp"
-        />
+        android:textSize="30dp" />
 
-    <Button
+    <ImageView
+        android:id="@+id/list_cross"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentRight="true"
-        android:padding=""
-        android:background="@drawable/cross_img"
-        />
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/cross_img" />
 
 </RelativeLayout>

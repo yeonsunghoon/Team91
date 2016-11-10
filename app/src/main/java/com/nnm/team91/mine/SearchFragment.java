@@ -27,6 +27,7 @@ public class SearchFragment extends ListFragment {
         adapter = new ListViewAdapter();
         setListAdapter(adapter);
 
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.search_img), "");
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.sharp_img), "이전 검색어", ContextCompat.getDrawable(getActivity(), R.drawable.cross_img));
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.sharp_img), "이전 검색어", ContextCompat.getDrawable(getActivity(), R.drawable.cross_img));
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.sharp_img), "이전 검색어", ContextCompat.getDrawable(getActivity(), R.drawable.cross_img));
