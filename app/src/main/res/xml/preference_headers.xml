@@ -14,6 +14,9 @@
         android:title="@string/pref_setting_alarm_set" />
     <header
         android:fragment="com.nnm.team91.mine.Prefs2Fragment"
+        android:title="@string/pref_setting_notice" />
+    <header
+        android:fragment="com.nnm.team91.mine.Prefs2Fragment"
         android:title="@string/pref_setting_customer" />
     <header
         android:fragment="com.nnm.team91.mine.Prefs2Fragment"
