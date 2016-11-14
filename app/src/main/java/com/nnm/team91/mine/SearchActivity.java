@@ -1,10 +1,9 @@
 package com.nnm.team91.mine;
 
-import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class SearchActivity extends AppCompatActivity {
     ActionBar actionBar;

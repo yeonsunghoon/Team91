@@ -1,10 +1,9 @@
 package com.nnm.team91.mine;
 
 import android.app.DatePickerDialog;
-import android.support.v4.app.DialogFragment;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.DialogFragment;
 import android.widget.DatePicker;
 
 import java.text.SimpleDateFormat;

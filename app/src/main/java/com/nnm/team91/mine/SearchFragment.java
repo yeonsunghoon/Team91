@@ -2,8 +2,6 @@ package com.nnm.team91.mine;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
@@ -27,7 +25,7 @@ public class SearchFragment extends ListFragment {
         adapter = new ListViewAdapter();
         setListAdapter(adapter);
 
-        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.search_img), "");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.search_img), ""); // TODO: image와 edittext의 위치 정렬, 검색할 때 새로운 단어를 띄어야 하기 때문에 Fragment를 씌워야할 것 같은 느낌적인 느낌
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.sharp_img), "이전 검색어", ContextCompat.getDrawable(getActivity(), R.drawable.cross_img));
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.sharp_img), "이전 검색어", ContextCompat.getDrawable(getActivity(), R.drawable.cross_img));
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.sharp_img), "이전 검색어", ContextCompat.getDrawable(getActivity(), R.drawable.cross_img));

@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
-
 public class TimelineActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE = 101;
@@ -42,7 +40,7 @@ public class TimelineActivity extends AppCompatActivity {
 
         calendarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //TODO: 캘린더 버튼 클릭시 년/월/일 상자가 뜰 수 있도록 수정
                 DialogFragment picker = new DatePickerFragment();
                 picker.show(getSupportFragmentManager(), "DatePicker");
             }
