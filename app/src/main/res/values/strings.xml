@@ -46,4 +46,8 @@
     <string name="pref_setting_alarm_sound">소리</string>
     <string name="pref_setting_alarm_vibes">진동</string>
     <string name="pref_setting_alarm_popup">알림 팝업</string>
+
+    <!-- edit activity -->
+    <string name="edit_time">현재 시간</string>
+    <string name="edit_content">들어갈 내용 #태그도 사용해야한다. - 현재 장소</string>
 </resources>
