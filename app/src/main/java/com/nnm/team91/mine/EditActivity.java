@@ -1,5 +1,10 @@
 package com.nnm.team91.mine;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +14,8 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import static android.R.attr.x;
 
 public class EditActivity extends AppCompatActivity {
     Button timingBtn, positionBtn, sharpBtn, checkBtn;
@@ -46,6 +53,7 @@ public class EditActivity extends AppCompatActivity {
         * */
         String strCurDate = CurDateFormat.format(date);
         dateTxt.setText(strCurDate);
+    }
 
 
 /*        //TODO: 기능 구현 (리스너 연결 후 기능 구현하지 않을 시 오류발생으로 주석처리)
@@ -78,8 +86,30 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
             }
-
         });
-    */
+
+    }
+*/
+
+    public void DiaryAlarm(View v) {
+        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, EditActivity.class), 0);
+
+        Notification.Builder builder = new Notification.Builder(this);
+        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setWhen(System.currentTimeMillis());
+        builder.setContentTitle("스케쥴");
+        builder.setContentText("약속 시간: 할 일");
+        builder.setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+        builder.setContentIntent(pendingIntent);
+        builder.setAutoCancel(true);
+
+        Notification.InboxStyle inboxStyle = new Notification.InboxStyle(builder);
+        inboxStyle.addLine("장소");
+        inboxStyle.addLine("사람");
+
+        builder.setStyle(inboxStyle);
+        nm.notify(1111, builder.build());
     }
 }
+

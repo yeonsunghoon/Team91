@@ -12,12 +12,14 @@
         android:baselineAlignBottom="true"
         android:background="@drawable/search_img" />
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/search_edt2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Search"
         android:singleLine="true"
+        android:completionHint="pick an item"
+        android:completionThreshold="2"
         android:lines="1" />
 
 

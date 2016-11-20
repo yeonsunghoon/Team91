@@ -67,6 +67,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:onClick="DiaryAlarm"
             android:background="@drawable/check_img"
             android:gravity="center" />
 

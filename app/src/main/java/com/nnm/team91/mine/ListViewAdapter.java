@@ -5,12 +5,16 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import static android.R.id.edit;
 
 /**
  * Created by tristan on 2016-11-10.
@@ -23,7 +27,7 @@ public class ListViewAdapter extends BaseAdapter {
     private static final int ITEM_VIEW_TYPE_SEARCH = 0;
     private static final int ITEM_VIEW_TYPE_LIST = 1;
     private static final int ITEM_VIEW_TYPE_MAX = 2;
-
+    String[] items = {"SM3", "SM5", "SM7", "SONATA", "AVANTE", "SOUL", "K5", "K7"};
     @Override
     public int getViewTypeCount() {
         return ITEM_VIEW_TYPE_MAX;
@@ -87,11 +91,10 @@ public class ListViewAdapter extends BaseAdapter {
                 case ITEM_VIEW_TYPE_LIST:
                     convertView = inflater.inflate(R.layout.search_listviewitem2, parent, false);
                     ImageView searchView = (ImageView) convertView.findViewById(R.id.search_img2);
-                    TextView edtView = (TextView) convertView.findViewById(R.id.search_edt2);
-
+                    AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) convertView.findViewById(R.id.search_edt2);
+//                    autoCompleteTextView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, items));
                     searchView.setImageDrawable(listViewItem.getSearchImg());
-                    edtView.setText(listViewItem.getEdtStr());
-
+                    autoCompleteTextView.setText(listViewItem.getEdtStr());
                     break;
             }
         }
@@ -110,6 +113,7 @@ public class ListViewAdapter extends BaseAdapter {
 
         listViewItemList.add(item);
     }
+
     public void addItem(Drawable search, String edt) {
         ListViewItem item = new ListViewItem();
 

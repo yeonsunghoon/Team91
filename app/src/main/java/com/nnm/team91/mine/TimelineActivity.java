@@ -75,6 +75,8 @@ public class TimelineActivity extends AppCompatActivity {
 
     } // end of onCreate
 
+
+
     // BackKey Event
     @Override
     public void onBackPressed() {
@@ -86,6 +88,8 @@ public class TimelineActivity extends AppCompatActivity {
         } else {
             backPressedTime = tempTime;
             Toast.makeText(getApplicationContext(), "'뒤로'버튼을 한 번 더 누르시면 종료됩니다.",Toast.LENGTH_SHORT).show();
+
+
         }
     }
 

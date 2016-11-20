@@ -16,11 +16,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".TimelineActivity" />
-        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="activity_settings"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".ListActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".EditActivity" />
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".SearchActivity" />
+
+        <service
+            android:name=".NotificationService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
