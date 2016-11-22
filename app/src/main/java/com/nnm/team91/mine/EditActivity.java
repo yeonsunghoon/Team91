@@ -10,16 +10,19 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static android.R.attr.x;
-
 public class EditActivity extends AppCompatActivity {
-    Button timingBtn, positionBtn, sharpBtn, checkBtn;
-    TextView dateTxt, contentTxt;
+    Button timingBtn, mapsBtn, sharpBtn, checkBtn;
+    TextView dateTxt;
+    EditText contentTxt;
+    RelativeLayout activity_edit;
+    public static final int REQUEST_CODE = 101;
 
     @Override
 
@@ -32,8 +35,11 @@ public class EditActivity extends AppCompatActivity {
 
         //TODO: dateformat으로 어떻게 해보자
 
+        activity_edit = (RelativeLayout) findViewById(R.id.activity_edit);
         dateTxt = (TextView) findViewById(R.id.now_txt);
-        contentTxt = (TextView) findViewById(R.id.content_txt);
+        contentTxt = (EditText) findViewById(R.id.content_txt);
+        mapsBtn = (Button)findViewById(R.id.maps_btn);
+
 
         // 현재 시간을 msec으로 구한다.
         long now = System.currentTimeMillis();
@@ -53,10 +59,17 @@ public class EditActivity extends AppCompatActivity {
         * */
         String strCurDate = CurDateFormat.format(date);
         dateTxt.setText(strCurDate);
-    }
 
+        mapsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EditActivity.this, MapsActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+/*
 
-/*        //TODO: 기능 구현 (리스너 연결 후 기능 구현하지 않을 시 오류발생으로 주석처리)
+       //TODO: 기능 구현 (리스너 연결 후 기능 구현하지 않을 시 오류발생으로 주석처리)
        timingBtn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -70,11 +83,7 @@ public class EditActivity extends AppCompatActivity {
        });
 
 
-        positionBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
+
 
         sharpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,11 +94,11 @@ public class EditActivity extends AppCompatActivity {
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            }
-        });
 
-    }
-*/
+            }
+        });  */
+
+    } // end of onCreate
 
     public void DiaryAlarm(View v) {
         NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -111,5 +120,7 @@ public class EditActivity extends AppCompatActivity {
         builder.setStyle(inboxStyle);
         nm.notify(1111, builder.build());
     }
+
+
 }
 
