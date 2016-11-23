@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 public class SettingsActivity extends PreferenceActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
 
         LinearLayout root = (LinearLayout)findViewById(android.R.id.list).getParent().getParent().getParent();
         Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.toolbar, root, false);

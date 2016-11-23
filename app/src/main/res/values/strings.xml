@@ -4,7 +4,9 @@
     <string name="two_time_back">버튼을 한 번 더 누르시면 종료됩니다.</string>
 
     <string name="pref_setting_android">안드로이드 설정</string>
+    <string name="pref_setting_font">글꼴</string>
     <string name="pref_setting_fontSize">글자 크기</string>
+    <string name="pref_setting_fontStyle">글씨체</string>
     <string name="pref_setting_lock">잠금</string>
     <string name="pref_setting_id">계정</string>
     <string name="pref_setting_connect_id">연결된 계정</string>

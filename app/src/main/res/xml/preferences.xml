@@ -4,10 +4,17 @@
         <!-- PreferenceScreen요소는 화면을 구분하는데 사용한다. -->
         <PreferenceScreen
             android:key="screen"
-            android:title="@string/pref_setting_fontSize">
+            android:title="@string/pref_setting_font">
             <PreferenceScreen
                 android:key="screen"
-                android:layout="@layout/preference_fontsize"></PreferenceScreen>
+                android:title="@string/pref_setting_fontSize">
+                <PreferenceScreen
+                    android:key="screen"
+                    android:layout="@layout/preference_fontsize"></PreferenceScreen>
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:key="screen"
+                android:title="@string/pref_setting_fontStyle"></PreferenceScreen>
         </PreferenceScreen>
         <PreferenceScreen
             android:key="screen"
@@ -62,8 +69,7 @@
             android:title="@string/pref_setting_notice">
             <PreferenceScreen
                 android:key="screen"
-                android:title="@string/pref_setting_notice">
-            </PreferenceScreen>
+                android:title="@string/pref_setting_notice"></PreferenceScreen>
         </PreferenceScreen>
         <PreferenceScreen
             android:key="screen"
@@ -114,5 +120,4 @@
                 android:layout="@layout/preference_appinfo"></PreferenceScreen>
         </PreferenceScreen>
     </PreferenceCategory>
-
 </PreferenceScreen>
