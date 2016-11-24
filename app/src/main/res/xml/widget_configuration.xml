@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android.updatePeriodMillis="1800000"
-    android:initialLayout="@layout/activity_widget"
+    android:initialLayout="@layout/custom_widget"
     android:minHeight="146dp"
     android:minWidth="294dp"
     android:resizeMode="horizontal|vertical"
-    android:previewImage="@layout/activity_widget"></appwidget-provider>
+    android:previewImage="@layout/custom_widget"></appwidget-provider>

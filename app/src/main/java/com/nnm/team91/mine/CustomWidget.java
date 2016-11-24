@@ -1,15 +1,19 @@
 package com.nnm.team91.mine;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.content.Intent;
 import android.util.Log;
+import android.widget.RemoteViews;
+import android.widget.Toast;
 
 public class CustomWidget extends AppWidgetProvider {
 
-    private  static final String TAG = "CustomWidget";
+    private static final String TAG = "CustomWidget";
     private Context context;
 
     @Override
@@ -18,8 +22,4 @@ public class CustomWidget extends AppWidgetProvider {
         super.onEnabled(context);
     }
 
-    @Override
-    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        super.onUpdate(context, appWidgetManager, appWidgetIds);
-    }
 }

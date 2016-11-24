@@ -11,6 +11,7 @@
     tools:context="com.nnm.team91.mine.CustomWidget">
 
     <Button
+        android:id="@+id/widget_brn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="테스트위젯"/>
